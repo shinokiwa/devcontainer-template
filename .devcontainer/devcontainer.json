@@ -1,27 +1,21 @@
 {
-  "name": "Rocky Linux 9 with Docker",
-  "dockerComposeFile": "docker-compose.yml",
+  "name": "devcontainer",
+  "overrideCommand": false,
+  "dockerComposeFile": "./docker-compose.yml",
   "service": "devcontainer",
-  "workspaceFolder": "/workspace",
-  
-  // Configure tool-specific properties.
+  "workspaceFolder": "/workspace/",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-azuretools.vscode-docker"
-      ]
+        "ms-azuretools.vscode-docker",
+        "EditorConfig.EditorConfig",
+        "GitHub.copilot",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory"
+      ],
+      "settings": {
+        "editor.formatOnSave": true
+      }
     }
-  },
-
-  // Set container user
-  "remoteUser": "vscode",
-  
-  // Features to add to the dev container
-  "features": {},
-  
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "echo 'Container created!'",
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
+  }
 }

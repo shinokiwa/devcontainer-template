@@ -1,0 +1,5 @@
+.env
+!.env.example
+
+.devcontainer/.ssh/*
+!.devcontainer/.ssh/config.example
